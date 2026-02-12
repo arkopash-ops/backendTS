@@ -27,9 +27,8 @@ app.post("/addUsers", (req, res) => {
             message: "Name is required and must be a non-empty string"
         });
     }
-    const newId = users.length > 0 ? Math.max(...users.map(u => u._id)) + 1 : 1;
     const newUser = {
-        _id: newId,
+        _id: users.length + 1,
         name: name.trim()
     };
     users.push(newUser);
