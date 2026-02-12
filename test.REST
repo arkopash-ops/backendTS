@@ -1,0 +1,23 @@
+### Test Rest API
+GET http://localhost:5000
+Content-Type: application/json
+
+### Create a new user
+POST http://localhost:5000/addUsers
+Content-Type: application/json
+
+{
+    "name": "Ayush"
+}
+
+### Get all users
+GET http://localhost:5000/getUsers
+Content-Type: application/json
+
+### Delete by ID
+DELETE http://localhost:5000/deleteUser/3
+Content-Type: application/json
+
+### Search user by name
+GET http://localhost:5000/searchUser?name=Ab
+Content-Type: application/json
